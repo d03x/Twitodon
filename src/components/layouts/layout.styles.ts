@@ -217,7 +217,7 @@ export const SideabarSearchIcon = styled(GoSearch)`
   padding-right: 2px;
   height: 24px;
 `;
-export const SidebarSearchResult = styled.div`
+export const SidebarSearchResult = styled(motion.div)`
   width: 100%;
   margin: 10px 0px;
   border: 1px solid var(--primary-border-color);

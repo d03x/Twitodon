@@ -1,11 +1,18 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { GoGear } from "react-icons/go";
 import { FiBell, FiHash, FiMessageCircle } from "react-icons/fi";
 import { RxAvatar } from "react-icons/rx";
 import { LuHouse, LuSearch } from "react-icons/lu";
 import * as Layout from "./layout.styles";
+import { AnimatePresence } from "motion/react";
 
 export const AppLayout = ({ children }: { children: ReactNode }) => {
+  const [showSearchResult, setShowSearchResult] = useState<boolean>(false);
+  const [searchKeyword, setSearchKeyword] = useState<string>("");
+  const showSearch = () => {
+    setShowSearchResult(!showSearchResult);
+  };
+
   return (
     // Wrapper Layout
     <Layout.Wrapper>
@@ -86,27 +93,47 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
         <Layout.SidebarRightWrapper>
           <Layout.SideabarSearch>
             <Layout.SideabarSearchIcon />
-            <Layout.SidebarSearchInput placeholder="Cari Tag,User,Postingan" />
+            <Layout.SidebarSearchInput
+              onClick={showSearch}
+              onChange={(e: any) =>
+                setSearchKeyword(e?.target?.value as string)
+              }
+              placeholder="Cari Tag,User,Postingan"
+            />
           </Layout.SideabarSearch>
           {/* Search Results */}
-          <Layout.SidebarSearchResult>
-            <Layout.SidebarSearchResultHeader>
-              Hasil untuk #pembina
-            </Layout.SidebarSearchResultHeader>
-            <Layout.SidebarSearchContent>
-              <ul>
-                <li>
-                  <p>#fufufafa</p>
-                </li>
-                <li>
-                  <p>#au ah gelap</p>
-                </li>
-                <li>
-                  <p>#kaburajadulu</p>
-                </li>
-              </ul>
-            </Layout.SidebarSearchContent>
-          </Layout.SidebarSearchResult>
+          <AnimatePresence>
+            {searchKeyword && (
+              <Layout.SidebarSearchResult
+                initial={{
+                  opacity: 0,
+                  translateY: 4,
+                }}
+                animate={{
+                  opacity: 1,
+                  translateY: 0,
+                }}
+                exit={{ opacity: 0, translateY: 4 }}
+              >
+                <Layout.SidebarSearchResultHeader>
+                  Hasil untuk #{searchKeyword}
+                </Layout.SidebarSearchResultHeader>
+                <Layout.SidebarSearchContent>
+                  <ul>
+                    <li>
+                      <p>#fufufafa</p>
+                    </li>
+                    <li>
+                      <p>#au ah gelap</p>
+                    </li>
+                    <li>
+                      <p>#kaburajadulu</p>
+                    </li>
+                  </ul>
+                </Layout.SidebarSearchContent>
+              </Layout.SidebarSearchResult>
+            )}
+          </AnimatePresence>
           {/* Trending */}
         </Layout.SidebarRightWrapper>
       </Layout.Sidebar>
