@@ -1,23 +1,8 @@
-import { motion } from "motion/react";
 import { ReactNode } from "react";
-import styled from "styled-components";
-import { FaUserCircle, FaHome } from "react-icons/fa";
-import {
-  GoBell,
-  GoComment,
-  GoGear,
-  GoHash,
-  GoHome,
-  GoPerson,
-  GoSearch,
-} from "react-icons/go";
-import { FcHome, FcSearch } from "react-icons/fc";
+import { GoGear } from "react-icons/go";
 import { FiBell, FiHash, FiMessageCircle } from "react-icons/fi";
-import { HiUserCircle } from "react-icons/hi";
-import { TiUserOutline } from "react-icons/ti";
 import { RxAvatar } from "react-icons/rx";
 import { LuHouse, LuSearch } from "react-icons/lu";
-
 import * as Layout from "./layout.styles";
 
 export const AppLayout = ({ children }: { children: ReactNode }) => {
