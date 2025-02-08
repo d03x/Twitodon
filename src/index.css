@@ -1,0 +1,35 @@
+/* @import "tailwindcss"; */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font-base: "Work Sans", serif;
+    --primary-bg-color: #ffffff;
+    --primary-bg-color-opacity: rgba(255, 255, 255, 0.7);
+    --secondary-bg-color: #f7f9f9;
+    --primary-border-color: #e4eaef;
+    --secondary-border-color: #d4dee6;
+    --primary-text-color: #14171a;
+    --secondary-text-color: #818e9c;
+    --tertiary-text-color: #6e7c8c;
+    --input-placeholder-color: rgba(91, 112, 131, 0.6);
+    --input-bg-color: #F0F2F5;
+    --primary-box-shadow: rgba(0, 0, 0, 0.20) 0px 10px 30px 0px;
+    --secondary-box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 30px 0px;
+    --modal-backdrop: rgba(0, 0, 0, 0.35);
+    --event-hover-bg: #f5f8fa;
+    --plyr-audio-control-color: #818e9c;
+    /* skin */
+    --primary-color: #067aff;
+    --plyr-color-main: #067aff;
+    --primary-color-darken-5: #006eec;
+    --primary-link-color: #009EFF;
+
+    /* utilites */
+    --danger-color: #f91155;
+    --danger-color-lighten-5: #fa2a67;
+    --success-color: #35c85f;
+    --warning-color: #ffa500;
+    --primary-border-radius: 16px;
+    --secondary-border-radius: 10px;
+    --tertiary-border-radius: 2px;
+}
