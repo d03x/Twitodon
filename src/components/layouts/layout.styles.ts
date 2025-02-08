@@ -31,7 +31,7 @@ export const Sidebar = styled.div`
   top: 0;
   display: none;
   @media (min-width: 620px) {
-    display: block;
+    display: none;
     width: 53px;
   }
   @media (min-width: 720px) {

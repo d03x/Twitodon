@@ -88,7 +88,6 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
             <Layout.SideabarSearchIcon />
             <Layout.SidebarSearchInput placeholder="Cari Tag,User,Postingan" />
           </Layout.SideabarSearch>
-
           {/* Search Results */}
           <Layout.SidebarSearchResult>
             <Layout.SidebarSearchResultHeader>
