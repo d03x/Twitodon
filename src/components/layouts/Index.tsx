@@ -107,13 +107,15 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
               <Layout.SidebarSearchResult
                 initial={{
                   opacity: 0,
+                  scaleY: 1.1,
                   translateY: 4,
                 }}
                 animate={{
+                  scaleY: 1,
                   opacity: 1,
                   translateY: 0,
                 }}
-                exit={{ opacity: 0, translateY: 4 }}
+                exit={{ opacity: 0, scaleY: 1.1, translateY: 4 }}
               >
                 <Layout.SidebarSearchResultHeader>
                   Hasil untuk #{searchKeyword}
