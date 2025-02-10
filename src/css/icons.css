@@ -1,0 +1,133 @@
+/* Custom font import */
+@font-face {
+  font-family: "TwitterIcon";
+  src: url("../assets/icons.ttf") format("truetype"); /* Update with actual path */
+}
+
+/* Icons as pseudo-elements */
+.icon-tweet::before {
+  content: "\f029"; /* fabTweet */
+  font-family: "TwitterIcon";
+}
+
+.icon-message-empty::before {
+  content: "\f187"; /* messageEmpty */
+  font-family: "TwitterIcon";
+}
+
+.icon-message-fill::before {
+  content: "\f554"; /* messageFill */
+  font-family: "TwitterIcon";
+}
+
+.icon-search::before {
+  content: "\f058"; /* search */
+  font-family: "TwitterIcon";
+}
+
+.icon-search-fill::before {
+  content: "\f558"; /* searchFill */
+  font-family: "TwitterIcon";
+}
+
+.icon-notification::before {
+  content: "\f055"; /* notification */
+  font-family: "TwitterIcon";
+}
+
+.icon-notification-fill::before {
+  content: "\f019"; /* notificationFill */
+  font-family: "TwitterIcon";
+}
+
+.icon-message-fab::before {
+  content: "\f053"; /* messageFab */
+  font-family: "TwitterIcon";
+}
+
+.icon-home::before {
+  content: "\f053"; /* home */
+  font-family: "TwitterIcon";
+}
+
+.icon-home-fill::before {
+  content: "\f553"; /* homeFill */
+  font-family: "TwitterIcon";
+}
+
+.icon-heart-empty::before {
+  content: "\f148"; /* heartEmpty */
+  font-family: "TwitterIcon";
+}
+
+.icon-heart-fill::before {
+  content: "\f015"; /* heartFill */
+  font-family: "TwitterIcon";
+}
+
+.icon-settings::before {
+  content: "\f059"; /* settings */
+  font-family: "TwitterIcon";
+}
+
+.icon-reply::before {
+  content: "\f151"; /* reply */
+  font-family: "TwitterIcon";
+}
+
+.icon-retweet::before {
+  content: "\f152"; /* retweet */
+  font-family: "TwitterIcon";
+}
+.icon-hash::before {
+  content: "\f052"; /* retweet */
+  font-family: "TwitterIcon";
+}
+
+.icon-at::before {
+  content: "\f064"; /* retweet */
+  font-family: "TwitterIcon";
+}
+
+.icon-verified::before {
+  content: "\F099"; /* retweet */
+  font-family: "TwitterIcon";
+}
+
+.icon-more-horiz::before {
+  content: "\F150"; /* retweet */
+  font-family: "TwitterIcon";
+}
+
+.icon-more-vertical::before {
+  content: "\F149"; /* retweet */
+  font-family: "TwitterIcon";
+}
+
+.icon-bookmark::before {
+  content: "\F155"; /* retweet */
+  font-family: "TwitterIcon";
+}
+
+.icon-info-outline::before {
+  content: "\F209"; /* retweet */
+  font-family: "TwitterIcon";
+}
+
+.icon-info-fill::before {
+  content: "\F217"; /* retweet */
+  font-family: "TwitterIcon";
+}
+
+.icon-share::before {
+  content: "\F185"; /* retweet */
+  font-family: "TwitterIcon";
+}
+.icon-check-outline::before {
+  content: "\f043"; /* retweet */
+  font-family: "TwitterIcon";
+}
+.icon-check-fill::before {
+  content: "\F220"; /* retweet */
+  font-family: "TwitterIcon";
+}

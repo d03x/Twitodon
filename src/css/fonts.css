@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://s3.amazonaws.com/appforest_uf/f1582572302242x708617694027007300/HelveticaNeueMedium.css");
+@import url("https://s3.amazonaws.com/appforest_uf/f1582572379690x961200678975184800/HelveticaNeueLight.css");
+@import url("https://s3.amazonaws.com/appforest_uf/f1582572217978x402216603433218000/HelveticaNeueThin.css");
+@import url("https://s3.amazonaws.com/appforest_uf/f1582572440430x748935920055720400/HelveticaNeueBold.css");
+/* FONT VARIABLE */
+:root {
+  --font-helvetica-bold: "HelveticaNeueBold";
+  --font-helvetica-thin: "HelveticaNeueThin";
+  --font-helvetica-light: "HelveticaNeueLight";
+  --font-helvetica-medium: "HelveticaNeueMedium";
+}
