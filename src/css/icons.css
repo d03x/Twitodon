@@ -131,3 +131,7 @@
   content: "\F220"; /* retweet */
   font-family: "TwitterIcon";
 }
+.icon-logo::before {
+  content: "\f014"; /* retweet */
+  font-family: "TwitterIcon";
+}
