@@ -1,26 +1,30 @@
+import { breakpoint } from "@/utils/breakpoint";
 import { motion } from "motion/react";
-import { BiMenu } from "react-icons/bi";
 import { GoSearch } from "react-icons/go";
 import { styled } from "styled-components";
-
+const sidebarWidth = {
+  small: 58,
+  large: 260,
+};
+const navbarHeight = 56;
 export const Wrapper = styled(motion.div)`
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  @media (min-width: 640px) {
+  @media (min-width: ${breakpoint.sm}) {
     display: flex;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoint.md}) {
     max-width: 1280px;
   }
 
-  @media (min-width: 1024px) {
-    padding: 0 10px;
+  @media (min-width: ${breakpoint.lg}) {
+    padding: 0 1.5em;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: ${breakpoint.xl}) {
     max-width: 1200px;
   }
 `;
@@ -31,17 +35,17 @@ export const Sidebar = styled.div<{ $right?: boolean }>`
   top: 0;
   display: none;
   @media (min-width: 620px) {
-    width: 55px;
+    width: ${sidebarWidth.small}px;
   }
   @media (min-width: 720px) {
     display: block;
     display: ${(props) => (props.$right ? "none" : "flex")};
     flex-direction: column;
-    align-items:center;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
   }
   @media (min-width: 1024px) {
-    min-width: 260px;
+    min-width: ${sidebarWidth.large}px;
     display: block;
   }
 `;
@@ -50,6 +54,7 @@ export const Content = styled.div`
   @media (min-width: 720px) {
     width: calc(100% - 260px - 260px);
   }
+  border: none;
   box-sizing: border-box;
   @media (min-width: 620px) {
     width: 100%;
@@ -66,7 +71,7 @@ export const Navbar = styled.div`
   background: var(--primary-bg-color);
   position: sticky;
   top: 0;
-  height: 48px;
+  height: ${navbarHeight}px;
   box-sizing: border-box;
   padding: 0 20px;
   border-bottom: 1px solid var(--primary-border-color);
@@ -106,7 +111,7 @@ export const LogoBrandName = styled.span`
   margin-left: 0.5em;
   color: var(--tertiary-text-color);
   display: none;
-  @media (min-width: 1024px) {
+  @media (min-width: ${breakpoint.lg}) {
     display: block;
   }
 `;
@@ -118,7 +123,7 @@ export const BetaBadge = styled.div`
   color: var(--danger-color);
   left: 4px;
   display: none;
-  @media (min-width: 1024px) {
+  @media (min-width: ${breakpoint.lg}) {
     display: block;
   }
 `;
@@ -130,10 +135,9 @@ export const SidebarMenu = styled(motion.div)`
   gap: 0.2em;
   color: var(--primary-text-color);
 
-  @media (min-width:1024px){
+  @media (min-width: 1024px) {
     margin-right: 2em;
   }
-
 `;
 export const SidebarMenuItem = styled.a`
   display: flex;
@@ -197,13 +201,15 @@ export const ButtonNewPost = styled(motion.button)`
   }
 `;
 
-export const NavbarHamburgerMenu = styled(BiMenu)`
-  width: 30px;
+export const NavbarHamburgerMenu = styled(motion.img)`
+  width: 32px;
   color: var(--primary-text-color);
   cursor: pointer;
-  height: 30px;
+  height: 32px;
   display: block;
+  border:2px solid var(--secondary-bg-color);
   margin-right: auto;
+  border-radius: 100%;
   @media (min-width: 1024px) {
     display: none;
   }
@@ -226,7 +232,9 @@ export const SideabarSearch = styled.form`
 export const SidebarSearchInput = styled.input`
   height: 2.9em;
   box-sizing: border-box;
+  font-family: var(--font-helvetica-bold);
   outline: none;
+  color: var(--primary-text-color);
   border: none;
   background: transparent;
   width: 100%;

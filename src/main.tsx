@@ -6,18 +6,12 @@ import { ThemeProvider } from './contexts/ThemeProvider.tsx'
 import { ThemeProvider as AppThemeProvider } from "styled-components";
 import "reset-css/reset.css";
 import "./index.css";
-const theme = {
-  breakpoints: {
-    sm: "640px",
-    md: "768px",
-    lg : "1024px",
-    xl:"1280px"
-  },
-};
+import { breakpoint } from './utils/breakpoint.ts'
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
-      <AppThemeProvider theme={theme}>
+      <AppThemeProvider theme={breakpoint}>
         <BrowserRouter>
           <App />
         </BrowserRouter>
