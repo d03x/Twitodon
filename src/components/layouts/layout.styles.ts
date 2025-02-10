@@ -10,7 +10,6 @@ export const Wrapper = styled(motion.div)`
   box-sizing: border-box;
   @media (min-width: 640px) {
     display: flex;
-    padding: 0 16px;
   }
 
   @media (min-width: 768px) {
@@ -18,6 +17,7 @@ export const Wrapper = styled(motion.div)`
   }
 
   @media (min-width: 1024px) {
+    padding: 0 10px;
   }
 
   @media (min-width: 1280px) {
@@ -25,20 +25,24 @@ export const Wrapper = styled(motion.div)`
   }
 `;
 
-export const Sidebar = styled.div`
+export const Sidebar = styled.div<{ $right?: boolean }>`
   height: 100vh;
   position: sticky;
   top: 0;
   display: none;
   @media (min-width: 620px) {
-    display: none;
-    width: 53px;
+    width: 55px;
   }
   @media (min-width: 720px) {
     display: block;
+    display: ${(props) => (props.$right ? "none" : "flex")};
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
   }
   @media (min-width: 1024px) {
     min-width: 260px;
+    display: block;
   }
 `;
 export const Content = styled.div`
@@ -99,6 +103,7 @@ export const SidebarLogo = styled.div`
 export const LogoBrandName = styled.span`
   font-weight: 500;
   font-size: 20px;
+  margin-left: 0.5em;
   color: var(--tertiary-text-color);
   display: none;
   @media (min-width: 1024px) {
@@ -118,25 +123,37 @@ export const BetaBadge = styled.div`
   }
 `;
 export const SidebarMenu = styled(motion.div)`
-  margin-right: 2em;
   display: flex;
+  margin-right: 0px;
   flex-direction: column;
   margin-top: 1em;
-  gap: 4px;
+  gap: 0.2em;
   color: var(--primary-text-color);
+
+  @media (min-width:1024px){
+    margin-right: 2em;
+  }
+
 `;
 export const SidebarMenuItem = styled.a`
   display: flex;
-  padding: 0.5em;
+  padding: 0.7em 0.5em;
   gap: 12px;
   flex: 1 1 0%;
-  width: 100%;
   cursor: pointer;
   align-items: center;
-  border-radius: 10px;
+  line-height: 1.3;
+  font-size: 15px;
+  transition: 100ms ease-in-out;
+  font-family: var(--font-helvetica-bold);
+  border-radius: 1em;
   color: var(--primary-text-color);
   &:hover {
-    background-color: var(--secondary-bg-color);
+    color: var(--primary-color);
+    background-color: var(--primary-color-opacity);
+    svg {
+      color: var(--primary-color);
+    }
   }
 `;
 export const SidebarMenuIcon = styled.div`
@@ -173,6 +190,7 @@ export const ButtonNewPost = styled(motion.button)`
   border-radius: 3em;
   cursor: pointer;
   border: none;
+  margin-top: 1.4em;
   display: none;
   @media (min-width: 1024px) {
     display: block;
@@ -195,15 +213,18 @@ export const SidebarRightWrapper = styled.div`
 `;
 export const SideabarSearch = styled.form`
   border: 1px solid var(--primary-border-color);
-  border-radius: 10px;
+  border-radius: 1.5em;
   overflow: hidden;
+  &:hover {
+    border: 1px solid var(--primary-color);
+  }
   align-items: center;
-  background: var(--input-bg-color);
+  background: var(--secondary-bg-color);
   display: flex;
   box-sizing: border-box;
 `;
 export const SidebarSearchInput = styled.input`
-  height: 2.5em;
+  height: 2.9em;
   box-sizing: border-box;
   outline: none;
   border: none;
@@ -222,6 +243,7 @@ export const SidebarSearchResult = styled(motion.div)`
   margin: 10px 0px;
   border: 1px solid var(--primary-border-color);
   overflow: hidden;
+  background: var(--secondary-bg-color);
   box-sizing: border-box;
   border-radius: 10px;
 `;
@@ -234,17 +256,22 @@ export const SidebarSearchResultHeader = styled.div`
     cursor: pointer;
   }
   border-bottom: 1px solid var(--primary-border-color);
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 14px;
+  font-family: var(--font-helvetica-bold);
 `;
 
 export const SidebarSearchContent = styled.div`
-  padding: 0 10px;
+  padding: 10px;
   ul {
+    display: flex;
+    font-family: var(--font-helvetica-medium);
+    flex-direction: column;
+    gap: 10px;
     list-style: none;
     padding: 0;
-    font-size: small;
+    font-size: 14px;
     li {
+      color: var(--secondary-text-color);
       &:hover {
         cursor: pointer;
         color: var(--primary-color);

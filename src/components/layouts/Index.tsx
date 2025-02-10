@@ -20,11 +20,10 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
         {/* sidebar logo */}
         <Layout.SidebarLogo>
           <Layout.Logo
-            width={33}
-            height={33}
-            src="https://colibrism.terla.pro/themes/default/statics/img/logo.png"
+            width={40}
+            height={40}
+            src="https://fcfac34883e0b5783dba4fa527fde14f.cdn.bubble.io/f1590605384527x357659894791220860/notrealtwitter.svg"
           />
-          <Layout.LogoBrandName>Twitodon</Layout.LogoBrandName>
           <Layout.BetaBadge>Beta</Layout.BetaBadge>
         </Layout.SidebarLogo>
         {/* SIdebar Menu */}
@@ -89,7 +88,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
         </Layout.Navbar>
         {children}
       </Layout.Content>
-      <Layout.Sidebar>
+      <Layout.Sidebar $right>
         <Layout.SidebarRightWrapper>
           <Layout.SideabarSearch>
             <Layout.SideabarSearchIcon />
