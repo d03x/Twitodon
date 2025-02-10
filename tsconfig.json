@@ -2,7 +2,8 @@
   "files": [],
   "compilerOptions": {
     "paths": {
-      "@/*" : ["./src/*"]
+      "@/*" : ["./src/*"],
+      "@page/*" : ["./src/pages/*"]
     }
   },
   "references": [

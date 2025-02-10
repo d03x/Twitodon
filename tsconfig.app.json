@@ -7,7 +7,8 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "paths": {
-      "@/*" : ["./src/*"]
+      "@/*" : ["./src/*"],
+      "@page/*" : ["./src/pages/*"]
     },
     /* Bundler mode */
     "moduleResolution": "bundler",
