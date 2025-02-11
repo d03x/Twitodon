@@ -5,13 +5,12 @@ import { BsPeople } from "react-icons/bs";
 import { LuGamepad } from "react-icons/lu";
 import { PiUsersThree } from "react-icons/pi";
 import { TiHomeOutline } from "react-icons/ti";
+import { Link } from "react-router";
 
 import styled from "styled-components";
 const sidebarWidth = "180px";
 const SidebarMain = styled.div`
-  
   min-width: ${sidebarWidth};
-  width: 100%;
   padding: 1em 0px;
   position: sticky;
   top: ${navHeight};
@@ -26,9 +25,12 @@ const SidebarMain = styled.div`
     gap: 0.2em;
   }
 `;
-const SidebarItem = styled.a`
+const SidebarItem = styled(Link)` 
+  outline: none;
+  text-decoration: none;
   display: flex;
   cursor: pointer;
+  color: var(--text-base);
   box-sizing: border-box;
   align-items: center;
   padding:0.3em 0.5em;
@@ -60,69 +62,69 @@ margin-left: 2.2em;
 export const Sidebar = () => {
   return (
     <SidebarMain>
-      <SidebarItem>
+      <SidebarItem to={'/'}>
         <SidebarIcon>
           <TiHomeOutline />
         </SidebarIcon>
-        <SidebarLabel>Kabar Beranda</SidebarLabel>
+        <SidebarLabel>Beranda</SidebarLabel>
       </SidebarItem>
-      <SidebarItem>
+      <SidebarItem to={'/notification'}>
         <SidebarIcon>
           <BiBell />
         </SidebarIcon>
         <SidebarLabel>Notifikasi</SidebarLabel>
       </SidebarItem>
-      <SidebarItem>
+      <SidebarItem to={'/'}>
         <SidebarIcon>
           <BiMessage />
         </SidebarIcon>
         <SidebarLabel>Pesan</SidebarLabel>
       </SidebarItem>
-      <SidebarItem>
+      <SidebarItem to={'/'}>
         <SidebarIcon>
           <PiUsersThree />
         </SidebarIcon>
         <SidebarLabel>Komunitas</SidebarLabel>
       </SidebarItem>
-      <SidebarItem>
+      <SidebarItem to={'/'}>
         <SidebarIcon>
           <BsPeople />
         </SidebarIcon>
         <SidebarLabel>Teman</SidebarLabel>
       </SidebarItem>
-      <SidebarItem>
+      <SidebarItem to={'/'}>
         < SidebarIcon>
           <BiBookmark />
         </SidebarIcon>
         <SidebarLabel>Bookmark</SidebarLabel>
       </SidebarItem>
 
-      <SidebarItem>
+      <SidebarItem to={'/'}>
         <SidebarIcon>
           <BiStore />
         </SidebarIcon>
         <SidebarLabel>Jual Beli</SidebarLabel>
       </SidebarItem>
       <SidebarDivider as={"divider"} />
-      <SidebarItem>
+      <SidebarItem to={'/'}>
         <SidebarIcon>
           <BiSmile />
         </SidebarIcon>
         <SidebarLabel>Stiker</SidebarLabel>
       </SidebarItem>
-      <SidebarItem>
+      <SidebarItem to={'/'}>
         <SidebarIcon>
           <BiVideo />
         </SidebarIcon>
         <SidebarLabel>Video</SidebarLabel>
       </SidebarItem>
-      <SidebarItem>
+      <SidebarItem to={'/'}>
         <SidebarIcon>
           <BiPhotoAlbum />
         </SidebarIcon>
         <SidebarLabel>Foto Album</SidebarLabel>
       </SidebarItem>
-      <SidebarItem>
+      <SidebarItem to={'/'}>
         <SidebarIcon>
           <LuGamepad />
         </SidebarIcon>

@@ -6,13 +6,21 @@ import { ThemeProvider as AppThemeProvider } from "styled-components";
 import "reset-css/reset.css";
 import "@/css/main.css";
 import { breakpoint } from "./utils/breakpoint.ts";
+import { Provider } from "react-redux";
+import store from "./stores/store.ts";
+import LoadingBar, { LoadingBarContainer } from "react-top-loading-bar";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <AppThemeProvider theme={breakpoint}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <Provider store={store}>
+        <LoadingBarContainer>
+          <LoadingBar />
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </LoadingBarContainer>
+      </Provider>
     </AppThemeProvider>
   </StrictMode>
 );

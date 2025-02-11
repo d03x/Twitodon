@@ -3,7 +3,9 @@
   "compilerOptions": {
     "paths": {
       "@/*" : ["./src/*"],
-      "@page/*" : ["./src/pages/*"]
+      "@page/*" : ["./src/pages/*"],
+      "@slice/*" : ["./src/stores/slices/*"],
+      
     }
   },
   "references": [

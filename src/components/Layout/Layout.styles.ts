@@ -18,6 +18,7 @@ export const Begin = styled.div`
     display: flex;
   }
 `;
-export const Content= styled.div`
-
+export const Content = styled.div`
+width:100%;
+padding:0.4em;
 `

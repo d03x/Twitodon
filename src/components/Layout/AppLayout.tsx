@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, Suspense } from "react";
 import * as Layout from "@/components/Layout/Layout.styles";
 import Navbar from "../Navbar/Navbar";
 import { Sidebar } from "./Sidebar/Sidebar";
@@ -13,7 +13,11 @@ const AppLayout = (props: AppLayoutProps) => {
       <Layout.Wrapper>
         <Layout.Begin>
           <Sidebar />
-          <Layout.Content>{props.children}</Layout.Content>
+          <Layout.Content>
+            <Suspense fallback={"Loading Page Data"}>
+              {props.children}
+            </Suspense>
+          </Layout.Content>
         </Layout.Begin>
       </Layout.Wrapper>
     </Layout.Main>
