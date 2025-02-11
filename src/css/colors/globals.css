@@ -1,20 +1,97 @@
 :root {
+  --color_text_primary: #e1e3e6;
   --text-color: #0f1419;
-  --background-color: rgb(255, 255, 255);
+  --background_color: rgb(255, 255, 255);
   --base-color: rgb(29, 155, 240);
-  --sidebar-label-color:#0f1419;
+  --sidebar-label-color: #0f1419;
+  --navbar_bg_color: #ffffff;
+  --navbar_bg_color--hover: #f5f5f7;
+  --navbar_bg_color--active: #ebecef;
+  --color_separator_secondary: #dce1e6;
+  --color_background_accent: #447bba;
+  --color_background_accent--hover: #4177b5;
+  --color_background_accent--active: #3f72b0;
+  --color_background_accent_themed: #447bba;
+  --color_background_accent_themed--hover: #4177b5;
+  --color_background_accent_themed--active: #3f72b0;
+  --color_background_accent_themed_alpha: rgba(68, 123, 186, 0.12);
+  --color_background_accent_themed_alpha--hover: rgba(68, 123, 186, 0.16);
+  --color_background_accent_themed_alpha--active: rgba(68, 123, 186, 0.2);
+  --color_background_accent_tint: #5a9eff;
+  --color_background_accent_tint--hover: #5698f7;
+  --color_background_accent_tint--active: #5393ef;
+  --color_background_accent_alternative: #2688eb;
+  --color_background_accent_alternative--hover: #2483e4;
+  --color_background_accent_alternative--active: #237edd;
+  --color_panel_header_icon: #447bba;
+  --color_panel_header_icon--hover: #4177b5;
+  --color_panel_header_icon--active: #3f72b0;
+
+  --color_text_accent: #71aaeb;
+  --color_text_accent--hover: #77adec;
+  --color_text_accent--active: #7cb1ed;
+  --color_text_accent_themed: #e1e3e6;
+  --color_text_accent_themed--hover: #e2e4e7;
+  --color_text_accent_themed--active: #e3e5e8;
+
+
+  --color_search_field_background: #edeef0;
+  --color_search_field_background--hover: #e4e5e9;
+  --color_search_field_background--active: #dadce2;
 }
 
 .dark {
+  --color_text_primary: #000000;
+  --color_separator_secondary: #363738;
+  --navbar_bg_color: #222222;
+  --navbar_bg_color--hover: #2b2b2b;
+  --navbar_bg_color--active: #343434;
   --text-color: #f7f9f9;
-  --background-color: rgb(0, 0, 0);
+  --background_color: rgb(0, 0, 0);
+  --color_background_accent: #71aaeb;
+  --color_background_accent--hover: #77adec;
+  --color_background_accent--active: #7cb1ed;
+  --color_background_accent_themed: #e1e3e6;
+  --color_background_accent_themed--hover: #d8dbdf;
+  --color_background_accent_themed--active: #cfd2d8;
+  --color_background_accent_themed_alpha: rgba(255, 255, 255, 0.2);
+  --color_background_accent_themed_alpha--hover: rgba(255,
+      255,
+      255,
+      0.24);
+  --color_background_accent_themed_alpha--active: rgba(255,
+      255,
+      255,
+      0.28);
+  --color_background_accent_tint--hover: #61a2ff;
+  --color_background_accent_tint--active: #67a6ff;
+  --color_background_accent_alternative--hover: #2f8dec;
+  --color_background_accent_alternative--active: #3792ed;
+  --color_panel_header_icon: #447bba;
+  --color_panel_header_icon--hover: #4177b5;
+  --color_panel_header_icon--active: #3f72b0;
+
+  --color_text_accent: #71aaeb;
+  --color_text_accent--hover: #77adec;
+  --color_text_accent--active: #7cb1ed;
+  --color_text_accent_themed: #e1e3e6;
+  --color_text_accent_themed--hover: #e2e4e7;
+  --color_text_accent_themed--active: #e3e5e8;
+
+
+  --color_search_field_background: #424242;
+  --color_search_field_background--hover: #4a4a4a;
+  --color_search_field_background--active: #515151;
 }
+
 .yellow-variance {
   --base-color: rgb(255, 212, 0);
 }
+
 .pink-variance {
   --base-color: rgb(249, 24, 128);
 }
+
 .dark-dimmed {
-  --background-color: rgb(21, 32, 43);
+  --background_color: rgb(21, 32, 43);
 }

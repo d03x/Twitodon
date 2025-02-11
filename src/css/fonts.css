@@ -3,6 +3,7 @@
 @import url("https://s3.amazonaws.com/appforest_uf/f1582572379690x961200678975184800/HelveticaNeueLight.css");
 @import url("https://s3.amazonaws.com/appforest_uf/f1582572217978x402216603433218000/HelveticaNeueThin.css");
 @import url("https://s3.amazonaws.com/appforest_uf/f1582572440430x748935920055720400/HelveticaNeueBold.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* FONT VARIABLE */
 :root {
   --font-helvetica-bold: "HelveticaNeueBold";

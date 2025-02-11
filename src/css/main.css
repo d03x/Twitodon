@@ -2,7 +2,11 @@
 @import url('./colors/globals.css');
 @import url('./icons.css');
 body {
-  background-color: var(--background-color);
+  background-color: var(--background_color);
   color: var(--text-color);
-  font-family: var(--font-helvetica-light);
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }

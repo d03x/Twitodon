@@ -1,118 +1,134 @@
-import Icon from "@/components/Icon";
+import { navHeight } from "@/components/Navbar/Navbar.styles";
 import { breakpoint } from "@/utils/breakpoint";
-import { motion } from "motion/react";
+import { BiBell, BiBookmark, BiMessage, BiPhotoAlbum, BiSmile, BiStore, BiVideo } from "react-icons/bi";
+import { BsPeople } from "react-icons/bs";
+import { LuGamepad } from "react-icons/lu";
+import { PiUsersThree } from "react-icons/pi";
+import { TiHomeOutline } from "react-icons/ti";
+
 import styled from "styled-components";
-import avatar from "@/assets/avatar.webp";
-const SidebarWrapper = styled.div`
-  margin: 0.3em 0px;
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 1em);
-`;
-const SidebarLogo = styled.div``;
-const SidebarMenu = styled.div`
-  margin-top: 0.5em;
-`;
-const SidebarProfile = styled.div`
-  margin-top: auto;
-`;
-const MenuItem = styled(motion.a)`
-  display: flex;
-  color: var(--sidebar-label-color);
-  padding: 11px 0em;
-  align-items: center;
-  font-size: 18px;
-  cursor: pointer;
-`;
-const MenuItemLabel = styled.span`
-  margin-left: 8px;
+const sidebarWidth = "180px";
+const SidebarMain = styled.div`
+  
+  min-width: ${sidebarWidth};
+  width: 100%;
+  padding: 1em 0px;
+  position: sticky;
+  top: ${navHeight};
+  padding-right:0.7em;
+  box-sizing: border-box;
+  border-right: 1px solid var(--color_separator_secondary);
+  height: calc(100vh - ${navHeight} - 1px);
   display: none;
-  font-family: var(--font-helvetica-light);
-  @media (min-width: ${breakpoint.lg}) {
-    display: block;
+  @media (min-width: ${breakpoint.xl}) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
   }
 `;
-const MenuItemIcon = styled(Icon).attrs({
-  size: 25,
-})`
-  border: 1px solid;
-`;
-
-const SidebarUserInfo = styled.div`
+const SidebarItem = styled.a`
   display: flex;
-  padding:0.5em;
-  /* background: #a1a1a139; */
-  margin-right: 0.8em;
-  border-radius: 2em;
+  cursor: pointer;
+  box-sizing: border-box;
   align-items: center;
-`;
-const SidebarAvatar = styled.img`
-  width: 40px;
-  aspect-ratio: 1/1;
-  border-radius: 100%;
-`;
-const SidebarUserMeta = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: 12px;
-`;
-const SidebarUserName = styled.span`
-  font-family: var(--font-helvetica-bold);
-  font-size: 16px;
-`;
-const SidebarUserNickName = styled.span`
-  font-size: 14px;
+  padding:0.3em 0.5em;
+  border-radius: 10px;
+  &:hover{
+    color: var(--color_text_accent);
+    background: var(--color_background_secondary--hover);
+  }
 `;
 
+const SidebarIcon = styled.span`
+color: var(--color_panel_header_icon);
+  svg{
+    width: 22px;
+    height: 22px;
+  }
+`;
+const SidebarLabel = styled.span`
+  display: block;
+  font-size: 14px;
+  margin-left: 4px;
+`;
+const SidebarDivider = styled.div`
+background:var(--color_separator_secondary);
+height:0.3px;
+margin-left: 2.2em;
+
+`
 export const Sidebar = () => {
   return (
-    <SidebarWrapper>
-      <SidebarLogo>
-        <Icon size={39} color={"blue"} name="logo" />
-      </SidebarLogo>
-      <SidebarMenu>
-        <MenuItem>
-          <MenuItemIcon name="home" />
-          <MenuItemLabel>Beranda</MenuItemLabel>
-        </MenuItem>
-        <MenuItem>
-          <MenuItemIcon name="notification" />
-          <MenuItemLabel>Notifications</MenuItemLabel>
-        </MenuItem>
-        <MenuItem>
-          <MenuItemIcon name="at" />
-          <MenuItemLabel>Cari Orang</MenuItemLabel>
-        </MenuItem>
-        <MenuItem>
-          <MenuItemIcon name="hash" />
-          <MenuItemLabel>Hastag</MenuItemLabel>
-        </MenuItem>
-        <MenuItem>
-          <MenuItemIcon name="search" />
-          <MenuItemLabel>Jelajahi</MenuItemLabel>
-        </MenuItem>
-        <MenuItem>
-          <MenuItemIcon name="message-empty" />
-          <MenuItemLabel>Percakapan</MenuItemLabel>
-        </MenuItem>
-        <MenuItem>
-          <MenuItemIcon name="settings" />
-          <MenuItemLabel>Pengaturan</MenuItemLabel>
-        </MenuItem>
-        <MenuItem>
-          <MenuItemIcon name="more-horiz" />
-          <MenuItemLabel>Lainnya</MenuItemLabel>
-        </MenuItem>
-      </SidebarMenu>
-      <SidebarProfile>
-        <SidebarUserInfo>
-          <SidebarAvatar src={avatar} />
-          <SidebarUserMeta>
-            <SidebarUserName>Dadan Hidaat</SidebarUserName>
-            <SidebarUserNickName>@dadandev</SidebarUserNickName>
-          </SidebarUserMeta>
-        </SidebarUserInfo>
-      </SidebarProfile>
-    </SidebarWrapper>
+    <SidebarMain>
+      <SidebarItem>
+        <SidebarIcon>
+          <TiHomeOutline />
+        </SidebarIcon>
+        <SidebarLabel>Kabar Beranda</SidebarLabel>
+      </SidebarItem>
+      <SidebarItem>
+        <SidebarIcon>
+          <BiBell />
+        </SidebarIcon>
+        <SidebarLabel>Notifikasi</SidebarLabel>
+      </SidebarItem>
+      <SidebarItem>
+        <SidebarIcon>
+          <BiMessage />
+        </SidebarIcon>
+        <SidebarLabel>Pesan</SidebarLabel>
+      </SidebarItem>
+      <SidebarItem>
+        <SidebarIcon>
+          <PiUsersThree />
+        </SidebarIcon>
+        <SidebarLabel>Komunitas</SidebarLabel>
+      </SidebarItem>
+      <SidebarItem>
+        <SidebarIcon>
+          <BsPeople />
+        </SidebarIcon>
+        <SidebarLabel>Teman</SidebarLabel>
+      </SidebarItem>
+      <SidebarItem>
+        < SidebarIcon>
+          <BiBookmark />
+        </SidebarIcon>
+        <SidebarLabel>Bookmark</SidebarLabel>
+      </SidebarItem>
+
+      <SidebarItem>
+        <SidebarIcon>
+          <BiStore />
+        </SidebarIcon>
+        <SidebarLabel>Jual Beli</SidebarLabel>
+      </SidebarItem>
+      <SidebarDivider as={"divider"} />
+      <SidebarItem>
+        <SidebarIcon>
+          <BiSmile />
+        </SidebarIcon>
+        <SidebarLabel>Stiker</SidebarLabel>
+      </SidebarItem>
+      <SidebarItem>
+        <SidebarIcon>
+          <BiVideo />
+        </SidebarIcon>
+        <SidebarLabel>Video</SidebarLabel>
+      </SidebarItem>
+      <SidebarItem>
+        <SidebarIcon>
+          <BiPhotoAlbum />
+        </SidebarIcon>
+        <SidebarLabel>Foto Album</SidebarLabel>
+      </SidebarItem>
+      <SidebarItem>
+        <SidebarIcon>
+          <LuGamepad />
+        </SidebarIcon>
+        <SidebarLabel>Game</SidebarLabel>
+      </SidebarItem>
+
+    </SidebarMain>
   );
 };

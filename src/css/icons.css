@@ -135,3 +135,19 @@
   content: "\f014"; /* retweet */
   font-family: "TwitterIcon";
 }
+.icon-komunitas::before {
+  content: "\f178"; /* retweet */
+  font-family: "TwitterIcon";
+}
+.icon-foto::before {
+  content: "\F109";
+  font-family: "TwitterIcon";
+}
+.icon-friends::before {
+  content: "\F175";
+  font-family: "TwitterIcon";
+}
+.icon-smile::before {
+  content: "\F430";
+  font-family: "TwitterIcon";
+}
